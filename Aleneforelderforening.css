@@ -1,0 +1,358 @@
+/* ========================================
+   ALENEFORELDERFORENINGEN
+   PROJECT SLIDER
+======================================== */
+
+.aleneforelder-page {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 120px 40px 100px;
+}
+
+
+/* ========================================
+   INTRO
+======================================== */
+
+.project-intro {
+    max-width: 750px;
+    margin-bottom: 70px;
+}
+
+.project-label {
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    opacity: 0.55;
+}
+
+.project-intro h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-size: clamp(55px, 7vw, 95px);
+    font-weight: 500;
+    line-height: 0.95;
+    margin: 0 0 30px;
+}
+
+.project-intro-text {
+    max-width: 600px;
+    font-family: "DM Sans", sans-serif;
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+}
+
+
+/* ========================================
+   SLIDER
+======================================== */
+
+.project-slider-section {
+    width: 100%;
+    overflow: hidden;
+}
+
+.project-slider {
+    display: flex;
+    width: 100%;
+    transition: transform 0.7s cubic-bezier(.77, 0, .18, 1);
+    cursor: grab;
+    user-select: none;
+}
+
+.project-slider:active {
+    cursor: grabbing;
+}
+
+
+/* ========================================
+   EACH SLIDE
+======================================== */
+
+.project-slide {
+    flex: 0 0 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1.4fr 0.8fr;
+    gap: 70px;
+
+    align-items: center;
+}
+
+
+/* ========================================
+   IMAGE / VIDEO
+======================================== */
+
+.slide-media {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 
+   CONTAIN gjør at hele bildet vises.
+   Bildet blir ikke beskåret eller zoomet.
+*/
+
+.slide-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* VIDEO */
+
+.video-media {
+    background: #111;
+}
+
+.video-media video {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+
+/* ========================================
+   TEXT
+======================================== */
+
+.slide-content {
+    padding-right: 30px;
+}
+
+.slide-number {
+    display: block;
+
+    font-family: "DM Sans", sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    opacity: 0.45;
+
+    margin-bottom: 25px;
+}
+
+.slide-content h2 {
+    font-family: "Cormorant Garamond", serif;
+
+    font-size: clamp(38px, 4vw, 60px);
+
+    font-weight: 500;
+
+    line-height: 1;
+
+    margin: 0 0 25px;
+}
+
+.slide-content p {
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 15px;
+
+    line-height: 1.8;
+
+    font-weight: 300;
+
+    max-width: 390px;
+
+    margin: 0;
+}
+
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.slider-navigation {
+    margin-top: 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+
+.slider-arrow {
+    width: 55px;
+    height: 55px;
+
+    border: 1px solid rgba(0,0,0,0.25);
+
+    background: transparent;
+
+    border-radius: 50%;
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+}
+
+.slider-arrow:hover {
+    background: #111;
+
+    color: white;
+
+    transform: scale(1.05);
+}
+
+
+.slider-progress {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+.progress-line {
+    width: 100px;
+
+    height: 1px;
+
+    background: rgba(0,0,0,0.25);
+}
+
+
+/* ========================================
+   SWIPE TEXT
+======================================== */
+
+.swipe-hint {
+    text-align: center;
+
+    margin-top: 25px;
+
+    font-family: "DM Sans", sans-serif;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+    opacity: 0.4;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+footer {
+    margin-top: 80px;
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media (max-width: 800px) {
+
+    .aleneforelder-page {
+        padding: 100px 20px 70px;
+    }
+
+
+    .project-intro {
+        margin-bottom: 50px;
+    }
+
+
+    .project-intro h1 {
+        font-size: 58px;
+    }
+
+
+    .project-slide {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+    }
+
+
+    .slide-media {
+        aspect-ratio: 4 / 3;
+    }
+
+
+    .slide-content {
+        padding-right: 0;
+    }
+
+
+    .slide-content h2 {
+        font-size: 42px;
+    }
+
+
+    .slide-content p {
+        max-width: 100%;
+    }
+
+
+    .slider-navigation {
+        margin-top: 30px;
+    }
+
+
+    .slider-arrow {
+        width: 48px;
+        height: 48px;
+    }
+
+
+    .progress-line {
+        width: 60px;
+    }
+
+}
+
+
+/* ========================================
+   SMALL MOBILE
+======================================== */
+
+@media (max-width: 500px) {
+
+    .project-intro h1 {
+        font-size: 48px;
+    }
+
+    .project-label {
+        font-size: 9px;
+    }
+
+    .slide-content h2 {
+        font-size: 36px;
+    }
+
+}

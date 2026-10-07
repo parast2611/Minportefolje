@@ -1,0 +1,614 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* =========================
+   BODY
+========================= */
+
+body {
+    background: #f8e9e9;
+    color: #171414;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    width: 100%;
+    padding: 35px 5vw;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 38px;
+    font-weight: 600;
+
+    color: #171414;
+    text-decoration: none;
+}
+
+.navbar nav {
+    display: flex;
+    gap: 32px;
+}
+
+.navbar nav a,
+.talk {
+    color: #171414;
+    text-decoration: none;
+
+    font-size: 13px;
+    letter-spacing: 3px;
+    font-weight: 500;
+}
+
+.talk {
+    border-bottom: 1px solid #171414;
+    padding-bottom: 8px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.projects-hero {
+    padding: 150px 8vw 100px;
+}
+
+.small-title,
+.project-number {
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.projects-hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(80px, 13vw, 190px);
+
+    line-height: 0.75;
+    font-weight: 500;
+}
+
+.projects-hero h1 span {
+    display: block;
+    color: #c8bfc0;
+}
+
+.intro {
+    max-width: 480px;
+
+    margin-top: 70px;
+
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+
+/* =========================
+   PHONE SECTION
+========================= */
+
+.phone-section {
+    padding: 100px 4vw 160px;
+}
+
+.phone-title {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.phone-title p {
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.phone-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 70px;
+    font-weight: 500;
+}
+
+
+/* =========================
+   FIRST SECTION
+   HIGHLIGHTS + VIDEO
+========================= */
+
+.highlight-explanation {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 35px;
+
+    padding: 20px 0 100px;
+}
+
+
+/* =========================
+   PHONE FRAME
+========================= */
+
+.highlight-explanation .phone {
+    width: 230px;
+    height: 470px;
+
+    flex-shrink: 0;
+
+    background: #191717;
+
+    border-radius: 45px;
+
+    padding: 10px;
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.15);
+
+    position: relative;
+}
+
+
+/* CAMERA / SPEAKER */
+
+.highlight-explanation .phone::before,
+.loyalty-phones .phone::before {
+    content: "";
+
+    position: absolute;
+
+    width: 70px;
+    height: 18px;
+
+    background: #191717;
+
+    border-radius: 20px;
+
+    top: 17px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+}
+
+
+/* PHONE SCREEN */
+
+.highlight-explanation .phone-screen,
+.loyalty-phones .phone-screen {
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+
+    border-radius: 36px;
+
+    background: #000;
+}
+
+
+/* IMAGES */
+
+.highlight-explanation .phone-screen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* VIDEOS */
+
+.highlight-explanation .phone-screen video,
+.loyalty-phones .phone-screen video {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+
+/* =========================
+   TEXT + ARROW
+========================= */
+
+.highlight-arrow {
+    width: 190px;
+
+    flex-shrink: 0;
+
+    text-align: center;
+}
+
+.highlight-arrow p {
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
+}
+
+.highlight-arrow .arrow {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 60px;
+
+    line-height: 1;
+
+    margin-top: 15px;
+}
+
+
+/* =========================
+   SKAPE LOJALITET
+========================= */
+
+.loyalty-section {
+    padding: 100px 0 160px;
+}
+
+
+/* TITLE */
+
+.loyalty-title {
+    text-align: center;
+
+    margin-bottom: 80px;
+}
+
+.loyalty-title p {
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+}
+
+.loyalty-title h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 70px;
+
+    font-weight: 500;
+}
+
+
+/* =========================
+   THREE LOYALTY IPHONES
+========================= */
+
+.loyalty-phones {
+    width: 100%;
+
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 60px;
+}
+
+
+/* PHONE */
+
+.loyalty-phones .phone {
+    width: 270px;
+    height: 550px;
+
+    flex-shrink: 0;
+
+    background: #191717;
+
+    border-radius: 45px;
+
+    padding: 10px;
+
+    position: relative;
+
+    box-shadow:
+        0 30px 60px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =========================
+   WEBSITE PROJECT
+========================= */
+
+.website-project {
+    padding: 150px 8vw;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 100px;
+
+    align-items: center;
+}
+
+
+/* PROJECT TEXT */
+
+.project-text h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 90px;
+
+    line-height: 0.8;
+
+    font-weight: 500;
+
+    margin-bottom: 50px;
+}
+
+.project-text h2 span {
+    display: block;
+
+    color: #c8bfc0;
+}
+
+.project-text p {
+    max-width: 430px;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    margin-bottom: 25px;
+}
+
+.project-tools {
+    margin-top: 45px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    border-top: 1px solid #b6aaaa;
+
+    padding-top: 15px;
+}
+
+
+/* =========================
+   WEBSITE IMAGE
+========================= */
+
+.website-image {
+    width: 100%;
+}
+
+.website-image img {
+    width: 100%;
+
+    display: block;
+
+    box-shadow:
+        0 30px 70px rgba(0, 0, 0, 0.12);
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    border-top: 1px solid #d4c6c5;
+
+    padding: 35px 5vw;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 1100px) {
+
+    .highlight-explanation {
+        gap: 20px;
+    }
+
+    .highlight-explanation .phone {
+        width: 200px;
+        height: 410px;
+    }
+
+    .highlight-arrow {
+        width: 150px;
+    }
+
+    .highlight-arrow p {
+        font-size: 9px;
+    }
+
+    .loyalty-phones {
+        gap: 30px;
+    }
+
+    .loyalty-phones .phone {
+        width: 220px;
+        height: 450px;
+    }
+
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 900px) {
+
+    /* NAVIGATION */
+
+    .navbar nav {
+        display: none;
+    }
+
+
+    /* HERO */
+
+    .projects-hero {
+        padding-top: 100px;
+    }
+
+    .projects-hero h1 {
+        font-size: 90px;
+    }
+
+
+    /* FIRST PHONE SECTION */
+
+    .highlight-explanation {
+        flex-direction: column;
+
+        gap: 35px;
+    }
+
+    .highlight-explanation .phone {
+        width: 270px;
+        height: 550px;
+    }
+
+    .highlight-arrow {
+        width: 100%;
+    }
+
+    .highlight-arrow .arrow {
+        transform: rotate(90deg);
+
+        margin: 20px 0;
+    }
+
+
+    /* SKAPE LOJALITET */
+
+    .loyalty-phones {
+        flex-direction: column;
+
+        gap: 40px;
+    }
+
+    .loyalty-phones .phone {
+        width: 270px;
+        height: 550px;
+    }
+
+    .loyalty-title h2 {
+        font-size: 60px;
+    }
+
+
+    /* WEBSITE */
+
+    .website-project {
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+    }
+
+    .project-text h2 {
+        font-size: 70px;
+    }
+
+}
+
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 500px) {
+
+    /* HERO */
+
+    .projects-hero h1 {
+        font-size: 65px;
+    }
+
+
+    /* PHONE */
+
+    .highlight-explanation .phone {
+        width: 230px;
+        height: 470px;
+    }
+
+
+    /* LOYALTY */
+
+    .loyalty-title h2 {
+        font-size: 50px;
+    }
+
+    .loyalty-phones .phone {
+        width: 230px;
+        height: 470px;
+    }
+
+
+    /* WEBSITE */
+
+    .project-text h2 {
+        font-size: 60px;
+    }
+
+
+    /* FOOTER */
+
+    footer {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+.website-image {
+    width: 100%;
+    max-width: 650px;
+}
+
+.website-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+}

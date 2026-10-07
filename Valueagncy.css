@@ -1,0 +1,1154 @@
+/* ==================================================
+   VALUE AGENCY
+   Parastu Heydari Portfolio
+================================================== */
+
+
+/* ==================================================
+   RESET
+================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+    background: #f8e9e9;
+    color: #272222;
+    font-family: "DM Sans", sans-serif;
+    overflow-x: hidden;
+}
+
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+/* ==================================================
+   NAVIGATION
+================================================== */
+
+.navbar {
+
+    width: 100%;
+    height: 90px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    border-bottom:
+        1px solid rgba(39, 34, 34, 0.12);
+
+    background: #f8e9e9;
+
+    position: relative;
+    z-index: 100;
+
+}
+
+
+.nav-logo {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 32px;
+
+    font-weight: 600;
+
+    letter-spacing: -1px;
+
+}
+
+
+.navbar nav {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 34px;
+
+}
+
+
+.navbar nav a {
+
+    font-size: 11px;
+
+    font-weight: 500;
+
+    letter-spacing: 1.5px;
+
+    transition:
+        opacity 0.3s ease;
+
+}
+
+
+.navbar nav a:hover {
+
+    opacity: 0.5;
+
+}
+
+
+.nav-contact {
+
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    border-bottom:
+        1px solid #272222;
+
+    padding-bottom: 5px;
+
+    transition:
+        opacity 0.3s ease;
+
+}
+
+
+.nav-contact:hover {
+
+    opacity: 0.5;
+
+}
+
+
+
+/* ==================================================
+   GENERAL
+================================================== */
+
+section {
+    width: 100%;
+}
+
+
+.section-label {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    font-weight: 500;
+
+    text-transform: uppercase;
+
+    color: #756b6b;
+
+}
+
+
+
+/* ==================================================
+   INTRO
+================================================== */
+
+.project-intro {
+
+    padding:
+        110px 8% 80px;
+
+    border-bottom:
+        1px solid rgba(39, 34, 34, 0.12);
+
+}
+
+
+.slider-text {
+
+    max-width: 850px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.slide-number {
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    color: #8b7c7c;
+
+    margin-bottom: 18px;
+
+}
+
+
+.slider-text h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 48px;
+
+    font-weight: 500;
+
+    margin-bottom: 20px;
+
+}
+
+
+.slider-text > p:last-child {
+
+    max-width: 760px;
+
+    margin: 0 auto;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #625858;
+
+}
+
+
+
+/* ==================================================
+   VALUE WORK
+================================================== */
+
+.value-work {
+
+    padding:
+        100px 8% 130px;
+
+}
+
+
+.slider-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding: 0 65px;
+
+}
+
+
+.image-slider {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+    background: #eee0e0;
+
+    border:
+        1px solid rgba(39, 34, 34, 0.12);
+
+}
+
+
+.slide {
+
+    display: none;
+
+    width: 100%;
+
+}
+
+
+.slide.active {
+
+    display: block;
+
+    animation:
+        fadeIn 0.45s ease;
+
+}
+
+
+.slide img {
+
+    width: 100%;
+
+    height: min(68vh, 720px);
+
+    object-fit: contain;
+
+    background: #f1e2e2;
+
+}
+
+
+
+/* ==================================================
+   SLIDER ARROWS
+================================================== */
+
+.slider-arrow {
+
+    position: absolute;
+
+    top: 50%;
+
+    transform:
+        translateY(-50%);
+
+    width: 48px;
+
+    height: 48px;
+
+    border:
+        1px solid rgba(39, 34, 34, 0.22);
+
+    border-radius: 50%;
+
+    background:
+        rgba(248, 233, 233, 0.96);
+
+    color: #272222;
+
+    font-size: 18px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    cursor: pointer;
+
+    z-index: 10;
+
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.3s ease;
+
+}
+
+
+.slider-arrow:hover {
+
+    background: #272222;
+
+    color: #f8e9e9;
+
+    transform:
+        translateY(-50%)
+        scale(1.05);
+
+}
+
+
+.slider-arrow.prev {
+
+    left: 0;
+
+}
+
+
+.slider-arrow.next {
+
+    right: 0;
+
+}
+
+
+
+/* ==================================================
+   VALUE DOTS
+================================================== */
+
+.slider-dots,
+.analytics-dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 9px;
+
+    margin-top: 30px;
+
+}
+
+
+.dot,
+.analytics-dot {
+
+    width: 7px;
+
+    height: 7px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #c7b7b7;
+
+    cursor: pointer;
+
+    padding: 0;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease;
+
+}
+
+
+.dot:hover,
+.analytics-dot:hover {
+
+    transform: scale(1.3);
+
+}
+
+
+.dot.active,
+.analytics-dot.active {
+
+    background: #272222;
+
+    transform: scale(1.25);
+
+}
+
+
+
+/* ==================================================
+   DATA OG INNSIKT
+================================================== */
+
+.analytics-section {
+
+    padding:
+        130px 8% 150px;
+
+    border-top:
+        1px solid rgba(39, 34, 34, 0.12);
+
+}
+
+
+.analytics-header {
+
+    max-width: 1250px;
+
+    margin: 0 auto 70px;
+
+}
+
+
+.analytics-header .section-label {
+
+    margin-bottom: 25px;
+
+}
+
+
+.analytics-header h2 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size:
+        clamp(60px, 8vw, 110px);
+
+    line-height: 0.85;
+
+    font-weight: 500;
+
+    letter-spacing: -4px;
+
+}
+
+
+.analytics-header h2 span {
+
+    font-style: italic;
+
+    margin-left: 80px;
+
+}
+
+
+
+/* ==================================================
+   ANALYTICS SLIDER
+================================================== */
+
+.analytics-slider-wrapper {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 1250px;
+
+    margin: 0 auto;
+
+    padding:
+        0 65px;
+
+}
+
+
+.analytics-slider {
+
+    position: relative;
+
+    width: 100%;
+
+    overflow: hidden;
+
+}
+
+
+.analytics-slide {
+
+    display: none;
+
+    width: 100%;
+
+    grid-template-columns:
+        minmax(0, 1.6fr)
+        minmax(280px, 0.7fr);
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+.analytics-slide.active {
+
+    display: grid;
+
+    animation:
+        fadeIn 0.45s ease;
+
+}
+
+
+
+/* ==================================================
+   ANALYTICS IMAGE FRAME
+================================================== */
+
+.analytics-image-frame {
+
+    width: 100%;
+
+    min-height: 500px;
+
+    padding: 28px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: #f1e2e2;
+
+    border:
+        1px solid rgba(39, 34, 34, 0.12);
+
+    box-shadow:
+        0 15px 40px
+        rgba(39, 34, 34, 0.06);
+
+    overflow: hidden;
+
+}
+
+
+.analytics-image-frame img {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 100%;
+
+    max-height: 560px;
+
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+
+/* ==================================================
+   ANALYTICS TEXT
+================================================== */
+
+.analytics-slide-text {
+
+    max-width: 400px;
+
+}
+
+
+.analytics-slide-text .slide-number {
+
+    margin-bottom: 20px;
+
+}
+
+
+.analytics-slide-text h3 {
+
+    font-family:
+        "Cormorant Garamond",
+        serif;
+
+    font-size: 48px;
+
+    line-height: 1;
+
+    font-weight: 500;
+
+    margin-bottom: 25px;
+
+}
+
+
+.analytics-slide-text > p:last-child {
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+    color: #625858;
+
+}
+
+
+
+/* ==================================================
+   ANALYTICS ARROWS
+================================================== */
+
+.analytics-prev {
+
+    left: 0;
+
+}
+
+
+.analytics-next {
+
+    right: 0;
+
+}
+
+
+
+/* ==================================================
+   FOOTER
+================================================== */
+
+footer {
+
+    width: 100%;
+
+    padding:
+        35px 6%;
+
+    border-top:
+        1px solid rgba(39, 34, 34, 0.12);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 20px;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    color: #756b6b;
+
+}
+
+
+
+/* ==================================================
+   ANIMATION
+================================================== */
+
+@keyframes fadeIn {
+
+    from {
+
+        opacity: 0;
+
+    }
+
+    to {
+
+        opacity: 1;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   TABLET
+================================================== */
+
+@media (max-width: 1000px) {
+
+
+    .navbar {
+
+        padding:
+            0 5%;
+
+    }
+
+
+    .navbar nav {
+
+        gap: 20px;
+
+    }
+
+
+    .nav-contact {
+
+        display: none;
+
+    }
+
+
+    .project-intro {
+
+        padding:
+            90px 6% 70px;
+
+    }
+
+
+    .value-work {
+
+        padding:
+            80px 5% 100px;
+
+    }
+
+
+    .slider-wrapper {
+
+        padding:
+            0 55px;
+
+    }
+
+
+    .analytics-section {
+
+        padding:
+            100px 5% 120px;
+
+    }
+
+
+    .analytics-slider-wrapper {
+
+        padding:
+            0 55px;
+
+    }
+
+
+    .analytics-slide {
+
+        grid-template-columns:
+            1.3fr 0.7fr;
+
+        gap: 45px;
+
+    }
+
+
+    .analytics-image-frame {
+
+        min-height: 430px;
+
+        padding: 22px;
+
+    }
+
+
+    .analytics-slide-text h3 {
+
+        font-size: 42px;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   MOBILE
+================================================== */
+
+@media (max-width: 700px) {
+
+
+    .navbar {
+
+        height: 75px;
+
+        padding:
+            0 6%;
+
+    }
+
+
+    .nav-logo {
+
+        font-size: 28px;
+
+    }
+
+
+    .navbar nav {
+
+        display: none;
+
+    }
+
+
+    .project-intro {
+
+        padding:
+            75px 7% 60px;
+
+    }
+
+
+    .slider-text h3 {
+
+        font-size: 38px;
+
+    }
+
+
+    .slider-text > p:last-child {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .value-work {
+
+        padding:
+            60px 5% 90px;
+
+    }
+
+
+    .slider-wrapper {
+
+        padding:
+            0 42px;
+
+    }
+
+
+    .slide img {
+
+        height: 55vh;
+
+        min-height: 320px;
+
+        object-fit: contain;
+
+    }
+
+
+    .slider-arrow {
+
+        width: 40px;
+
+        height: 40px;
+
+        font-size: 16px;
+
+    }
+
+
+    .slider-arrow.prev {
+
+        left: 0;
+
+    }
+
+
+    .slider-arrow.next {
+
+        right: 0;
+
+    }
+
+
+    .analytics-section {
+
+        padding:
+            85px 5% 100px;
+
+    }
+
+
+    .analytics-header {
+
+        margin-bottom: 45px;
+
+    }
+
+
+    .analytics-header h2 {
+
+        font-size:
+            clamp(52px, 15vw, 80px);
+
+        letter-spacing:
+            -2px;
+
+    }
+
+
+    .analytics-header h2 span {
+
+        margin-left: 35px;
+
+    }
+
+
+    .analytics-slider-wrapper {
+
+        width: 100%;
+
+        padding:
+            0 42px;
+
+    }
+
+
+    .analytics-slide {
+
+        display: none;
+
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+    }
+
+
+    .analytics-slide.active {
+
+        display: grid;
+
+    }
+
+
+    .analytics-image-frame {
+
+        min-height: 0;
+
+        height: auto;
+
+        padding: 16px;
+
+    }
+
+
+    .analytics-image-frame img {
+
+        width: 100%;
+
+        max-height: 420px;
+
+        height: auto;
+
+        object-fit: contain;
+
+    }
+
+
+    .analytics-slide-text {
+
+        max-width: none;
+
+        padding:
+            0 4px;
+
+    }
+
+
+    .analytics-slide-text h3 {
+
+        font-size: 40px;
+
+        margin-bottom: 18px;
+
+    }
+
+
+    .analytics-slide-text > p:last-child {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+    }
+
+
+    .analytics-prev {
+
+        left: 0;
+
+    }
+
+
+    .analytics-next {
+
+        right: 0;
+
+    }
+
+
+    footer {
+
+        padding:
+            30px 6%;
+
+        flex-direction: column;
+
+        text-align: center;
+
+        gap: 10px;
+
+    }
+
+}
+
+
+
+/* ==================================================
+   SMALL MOBILE
+================================================== */
+
+@media (max-width: 430px) {
+
+
+    .slider-wrapper {
+
+        padding:
+            0 38px;
+
+    }
+
+
+    .analytics-slider-wrapper {
+
+        padding:
+            0 38px;
+
+    }
+
+
+    .slide img {
+
+        min-height: 260px;
+
+        height: 48vh;
+
+    }
+
+
+    .analytics-image-frame {
+
+        padding: 12px;
+
+    }
+
+
+    .analytics-image-frame img {
+
+        max-height: 350px;
+
+    }
+
+
+    .slider-arrow {
+
+        width: 36px;
+
+        height: 36px;
+
+    }
+
+
+    .analytics-slide-text h3 {
+
+        font-size: 36px;
+
+    }
+
+}
